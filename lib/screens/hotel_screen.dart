@@ -1,7 +1,6 @@
 import 'package:book_tickets/utilis/app_layout.dart';
 import 'package:book_tickets/utilis/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class HotelScreen extends StatelessWidget {
   final Map<String, dynamic> hotel;
@@ -39,17 +38,17 @@ class HotelScreen extends StatelessWidget {
                     fit: BoxFit.cover,
                     image: AssetImage("assets/${hotel['image']}"))),
           ),
-          const Gap(10),
+          const SizedBox(height: 10),
           Text(
             "${hotel['place']}",
             style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
           ),
-          const Gap(5),
+          const SizedBox(height: 5),
           Text(
             "${hotel['destination']}",
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
           ),
-          const Gap(8),
+          const SizedBox(height: 8),
           Text(
             "\ ₽${hotel['price']}/night",
             style: Styles.headLineStyle1.copyWith(color: Styles.kakiColor),

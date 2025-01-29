@@ -1,10 +1,8 @@
 import 'package:book_tickets/utilis/app_layout.dart';
 import 'package:book_tickets/utilis/styles.dart';
-import 'package:book_tickets/widgets/column_layout.dart';
 import 'package:book_tickets/widgets/layout_builder_widget.dart';
 import 'package:book_tickets/widgets/thick_container.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 class TicketView extends StatelessWidget {
@@ -51,7 +49,7 @@ class TicketView extends StatelessWidget {
                         children: [
                           SizedBox(
                             height: AppLayout.getHeight(24),
-                            child: AppLayoutBuilderWidget(
+                            child: const AppLayoutBuilderWidget(
                               sections: 6,
                             ),
                           ),
@@ -80,7 +78,7 @@ class TicketView extends StatelessWidget {
                               : Styles.headLineStyle3),
                     ],
                   ),
-                  const Gap(3),
+                  const SizedBox(height: 3,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -129,7 +127,7 @@ class TicketView extends StatelessWidget {
                         color: isColor == null
                             ? Colors.grey.shade200
                             : Colors.white,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(10),
                           bottomRight: Radius.circular(10),
                         ),
@@ -216,7 +214,7 @@ class TicketView extends StatelessWidget {
                                     .copyWith(color: Colors.white)
                                 : Styles.headLineStyle3,
                           ),
-                          const Gap(5),
+                          const SizedBox(height: 5,),
                           Text(
                             "Date",
                             style: isColor == null
@@ -236,7 +234,7 @@ class TicketView extends StatelessWidget {
                                     .copyWith(color: Colors.white)
                                 : Styles.headLineStyle3,
                           ),
-                          const Gap(5),
+                          const SizedBox(height: 5,),
                           Text(
                             "Departure time",
                             style: isColor == null
@@ -256,7 +254,7 @@ class TicketView extends StatelessWidget {
                                     .copyWith(color: Colors.white)
                                 : Styles.headLineStyle3,
                           ),
-                          const Gap(5),
+                          const SizedBox(height: 5,),
                           Text(
                             "Number",
                             style: isColor == null

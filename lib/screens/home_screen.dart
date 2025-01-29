@@ -3,7 +3,6 @@ import 'package:book_tickets/screens/ticket_view.dart';
 import 'package:book_tickets/utilis/app_info_list.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../utilis/styles.dart';
 import '../widgets/double_text_widget.dart';
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                const Gap(40),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -32,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                           "Good Morning",
                           style: Styles.headLineStyle3,
                         ),
-                        const Gap(5),
+                        const SizedBox(height: 5),
                         Text(
                           "Book Tickets",
                           style: Styles.headLineStyle1,
@@ -50,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                const Gap(25),
+                const SizedBox(height: 25),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -70,14 +69,14 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Gap(40),
+                const SizedBox(height: 40),
                 // texts via (double widgets)
                 const AppDoubleTextWidget(
                     bigText: 'Upcomming Flights', smallText: 'View all'),
               ],
             ),
           ),
-          const Gap(15),
+          const SizedBox(height: 15),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
@@ -89,14 +88,14 @@ class HomeScreen extends StatelessWidget {
                   .toList(),
             ),
           ),
-          const Gap(15),
+          const SizedBox(height: 15),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             // texts via (double widgets)
             child: const AppDoubleTextWidget(
                 bigText: 'Hotels', smallText: 'View all'),
           ),
-          const Gap(15),
+          const SizedBox(height: 15),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),

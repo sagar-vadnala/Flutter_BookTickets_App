@@ -4,7 +4,6 @@ import 'package:book_tickets/widgets/double_text_widget.dart';
 import 'package:book_tickets/widgets/icon_text_widget.dart';
 import 'package:book_tickets/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -19,22 +18,22 @@ class SearchScreen extends StatelessWidget {
             horizontal: AppLayout.getWidth(20),
             vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(child: AppLayout.getHeight(40),),
           Text(
             "What are\n you looking for?",
             style: Styles.headLineStyle1.copyWith(fontSize: 35),
           ),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(child: AppLayout.getHeight(20),),
           // airlines and hotels via widgets (ticket_tabs)
           const AppTicketTabs(
               firstTab: 'Airlines Tickets', secondTab: 'Hotels'),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(child: AppLayout.getHeight(25),),
           // Departure and arrival section via (icon_text_widget)
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, text: "Departure"),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(child: AppLayout.getHeight(20),),
           const AppIconText(icon: Icons.flight_land_rounded, text: "Arrival"),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(child: AppLayout.getHeight(25),),
           // Find tickets section
           Container(
             padding: EdgeInsets.symmetric(
@@ -55,11 +54,11 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
 
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(child: AppLayout.getHeight(40),),
           // view all and Big text via (WIDGETS)
           const AppDoubleTextWidget(
               bigText: 'Upcomming Flights', smallText: 'View all'),
-          Gap(AppLayout.getHeight(15)),
+          SizedBox(child: AppLayout.getHeight(15),),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -93,7 +92,7 @@ class SearchScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Gap(AppLayout.getHeight(15)),
+                    SizedBox(child: AppLayout.getHeight(15),),
                     Text(
                       "20% discount on early flight bookings don't miss the chance to avail this offer",
                       style: Styles.headLineStyle2,
@@ -124,7 +123,7 @@ class SearchScreen extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white),
                             ),
-                            Gap(AppLayout.getHeight(10)),
+                            SizedBox(child: AppLayout.getHeight(10),),
                             Text(
                               "Take the survey about our services and get discount",
                               style: Styles.headLineStyle2.copyWith(
@@ -150,7 +149,7 @@ class SearchScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Gap(AppLayout.getHeight(15)),
+                  SizedBox(child: AppLayout.getHeight(15),),
                   Container(
                     width: size.width * 0.44,
                     height: AppLayout.getHeight(210),
@@ -169,7 +168,7 @@ class SearchScreen extends StatelessWidget {
                               color: Colors.white, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
                         ),
-                        Gap(AppLayout.getHeight(5)),
+                        SizedBox(child: AppLayout.getHeight(5),),
                         RichText(
                             text: const TextSpan(
                           children: [

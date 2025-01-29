@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../utilis/app_layout.dart';
 import '../utilis/styles.dart';
@@ -29,7 +28,7 @@ class AppIconText extends StatelessWidget {
             icon,
             color: const Color(0xFFBFC2DF),
           ),
-          Gap(AppLayout.getWidth(10)),
+          SizedBox(child:AppLayout.getWidth(10)),
           Text(
             text,
             style: Styles.textStyle,

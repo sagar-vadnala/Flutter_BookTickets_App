@@ -4,7 +4,7 @@ import 'package:book_tickets/widgets/column_layout.dart';
 import 'package:book_tickets/widgets/layout_builder_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+// import 'package:gap/gap.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
             horizontal: AppLayout.getHeight(20),
             vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          SizedBox(child: AppLayout.getHeight(40)),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
                       image: AssetImage("assets/img_1.png")),
                 ),
               ),
-              Gap(AppLayout.getHeight(10)),
+              SizedBox(child: AppLayout.getHeight(10)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
                     "Book Tickets",
                     style: Styles.headLineStyle1,
                   ),
-                  Gap(AppLayout.getHeight(2)),
+                  SizedBox(child :AppLayout.getHeight(2)),
                   Text(
                     "Mumbai",
                     style: TextStyle(
@@ -49,7 +49,7 @@ class ProfileScreen extends StatelessWidget {
                       color: Colors.grey.shade500,
                     ),
                   ),
-                  Gap(AppLayout.getHeight(8)),
+                  SizedBox(child:AppLayout.getHeight(8)),
                   Container(
                     decoration: BoxDecoration(
                         borderRadius:
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                             size: 15,
                           ),
                         ),
-                        Gap(AppLayout.getHeight(5)),
+                        SizedBox(child: AppLayout.getHeight(5)),
                         const Text(
                           "Premium status",
                           style: TextStyle(
@@ -78,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        Gap(AppLayout.getHeight(5)),
+                        SizedBox(child: AppLayout.getHeight(5)),
                       ],
                     ),
                   ),
@@ -102,11 +102,11 @@ class ProfileScreen extends StatelessWidget {
               )
             ],
           ),
-          Gap(AppLayout.getHeight(8)),
+          SizedBox(child:AppLayout.getHeight(8)),
           Divider(
             color: Colors.grey.shade300,
           ),
-          Gap(AppLayout.getHeight(8)),
+          SizedBox(child:AppLayout.getHeight(8)),
           Stack(
             children: [
               Container(
@@ -145,7 +145,7 @@ class ProfileScreen extends StatelessWidget {
                         size: 27,
                       ),
                     ),
-                    Gap(AppLayout.getHeight(12)),
+                    SizedBox(child :AppLayout.getHeight(12)),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -169,12 +169,12 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(child:AppLayout.getHeight(25)),
           Text(
             "Accumulated miles",
             style: Styles.headLineStyle2,
           ),
-          Gap(AppLayout.getHeight(20)),
+          SizedBox(child:AppLayout.getHeight(20)),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
             decoration: BoxDecoration(
@@ -188,7 +188,7 @@ class ProfileScreen extends StatelessWidget {
                 ]),
             child: Column(
               children: [
-                Gap(AppLayout.getHeight(15)),
+                SizedBox(child:AppLayout.getHeight(15)),
                 Text(
                   "192802",
                   style: TextStyle(
@@ -196,7 +196,7 @@ class ProfileScreen extends StatelessWidget {
                       color: Styles.textColor,
                       fontWeight: FontWeight.w600),
                 ),
-                Gap(AppLayout.getHeight(20)),
+                SizedBox(child:AppLayout.getHeight(20)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -210,14 +210,14 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(4)),
+                SizedBox(child:AppLayout.getHeight(4)),
                 Divider(
                   color: Colors.grey.shade300,
                 ),
-                Gap(AppLayout.getHeight(4)),
-                Row(
+                SizedBox(child:AppLayout.getHeight(4)),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     AppColumnLayout(
                       firstText: "23 042",
                       secondText: "Miles",
@@ -232,15 +232,15 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(child:AppLayout.getHeight(12)),
                 const AppLayoutBuilderWidget(
                   sections: 12,
                   isColor: false,
                 ),
-                Gap(AppLayout.getHeight(12)),
-                Row(
+                SizedBox(child:AppLayout.getHeight(12)),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     AppColumnLayout(
                       firstText: "24",
                       secondText: "Miles",
@@ -255,15 +255,15 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(12)),
+                SizedBox(child:AppLayout.getHeight(12)),
                 const AppLayoutBuilderWidget(
                   sections: 12,
                   isColor: false,
                 ),
-                Gap(AppLayout.getHeight(12)),
-                Row(
+                SizedBox(child:AppLayout.getHeight(12)),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     AppColumnLayout(
                       firstText: "52 340",
                       secondText: "Miles",
@@ -281,7 +281,7 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
-          Gap(AppLayout.getHeight(25)),
+          SizedBox(child:AppLayout.getHeight(25)),
           InkWell(
             onTap: () => print("you are tapped"),
             child: Center(

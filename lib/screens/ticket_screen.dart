@@ -6,7 +6,6 @@ import 'package:book_tickets/widgets/column_layout.dart';
 import 'package:book_tickets/widgets/layout_builder_widget.dart';
 import 'package:book_tickets/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatelessWidget {
@@ -24,15 +23,17 @@ class TicketScreen extends StatelessWidget {
                 horizontal: AppLayout.getHeight(20),
                 vertical: AppLayout.getHeight(20)),
             children: [
-              Gap(AppLayout.getHeight(40)),
+              SizedBox(
+                child: AppLayout.getHeight(40),
+              ),
               Text(
                 "Tickets",
                 style: Styles.headLineStyle1,
               ),
-              Gap(AppLayout.getHeight(20)),
+              SizedBox(child: AppLayout.getHeight(20),),
               // upcomming previous via (ticket_tabs)
               const AppTicketTabs(firstTab: "Upcomming", secondTab: "Previous"),
-              Gap(AppLayout.getHeight(20)),
+              SizedBox(child: AppLayout.getHeight(20),),
               Container(
                 padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
                 child: TicketView(
@@ -45,16 +46,16 @@ class TicketScreen extends StatelessWidget {
                 height: 1,
               ),
               Container(
-                margin: EdgeInsets.symmetric(
+                margin: const EdgeInsets.symmetric(
                   horizontal: 15,
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 color: Colors.white,
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         AppColumnLayout(
                           alignment: CrossAxisAlignment.start,
                           firstText: "Flutter App",
@@ -69,16 +70,16 @@ class TicketScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Gap(AppLayout.getHeight(20)),
+                    SizedBox(child: AppLayout.getHeight(20),),
                     const AppLayoutBuilderWidget(
                       sections: 15,
                       isColor: false,
                       width: 5,
                     ),
-                    Gap(AppLayout.getHeight(20)),
-                    Row(
+                    SizedBox(child: AppLayout.getHeight(20),),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         AppColumnLayout(
                           alignment: CrossAxisAlignment.start,
                           firstText: "1234 5678 9012",
@@ -93,13 +94,13 @@ class TicketScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Gap(AppLayout.getHeight(20)),
+                    SizedBox(child: AppLayout.getHeight(20),),
                     const AppLayoutBuilderWidget(
                       sections: 15,
                       isColor: false,
                       width: 5,
                     ),
-                    Gap(AppLayout.getHeight(20)),
+                    SizedBox(child: AppLayout.getHeight(20),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -117,7 +118,7 @@ class TicketScreen extends StatelessWidget {
                                 )
                               ],
                             ),
-                            const Gap(5),
+                            const SizedBox(height: 5),
                             Text(
                               "Payment method",
                               style: Styles.headLineStyle4,
@@ -146,8 +147,8 @@ class TicketScreen extends StatelessWidget {
                       bottomRight: Radius.circular(12),
                       bottomLeft: Radius.circular(12),
                     )),
-                margin: EdgeInsets.only(left: 15, right: 15),
-                padding: EdgeInsets.only(top: 20, bottom: 20),
+                margin: const EdgeInsets.only(left: 15, right: 15),
+                padding: const EdgeInsets.only(top: 20, bottom: 20),
                 child: Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15)),
@@ -165,7 +166,7 @@ class TicketScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(AppLayout.getHeight(20)),
+              SizedBox(child: AppLayout.getHeight(20),),
               Container(
                 padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
                 child: TicketView(
